@@ -16,6 +16,10 @@
 		7B27CABE2BAA2E84005EF785 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B27CABD2BAA2E84005EF785 /* ViewController.swift */; };
 		7B27CAC32BAA2E86005EF785 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B27CAC22BAA2E86005EF785 /* Assets.xcassets */; };
 		7B27CAC62BAA2E86005EF785 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 7B27CAC52BAA2E86005EF785 /* Base */; };
+		FB60B3EB2BAC2A4C00C5B481 /* DogsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB60B3EA2BAC2A4C00C5B481 /* DogsTableViewCell.swift */; };
+		FB9ED3822BAB50360017C254 /* CatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9ED3812BAB50360017C254 /* CatsTableViewCell.swift */; };
+		FB9ED3842BAB53240017C254 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9ED3832BAB53240017C254 /* Extensions.swift */; };
+		FFA66F162BAB114200D94686 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA66F152BAB114200D94686 /* FirstViewController.swift */; };
 		FFA66F182BAB115100D94686 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA66F172BAB115100D94686 /* SecondViewController.swift */; };
 		FFA66F1A2BAB115F00D94686 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA66F192BAB115F00D94686 /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +36,10 @@
 		7B27CAC22BAA2E86005EF785 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B27CAC52BAA2E86005EF785 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B27CAC72BAA2E86005EF785 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB60B3EA2BAC2A4C00C5B481 /* DogsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsTableViewCell.swift; sourceTree = "<group>"; };
+		FB9ED3812BAB50360017C254 /* CatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsTableViewCell.swift; sourceTree = "<group>"; };
+		FB9ED3832BAB53240017C254 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		FFA66F152BAB114200D94686 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		FFA66F172BAB115100D94686 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		FFA66F192BAB115F00D94686 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,7 +93,10 @@
 				7B27CAC42BAA2E86005EF785 /* LaunchScreen.storyboard */,
 				7B27CAC72BAA2E86005EF785 /* Info.plist */,
 				FFA66F172BAB115100D94686 /* SecondViewController.swift */,
+				FB9ED3812BAB50360017C254 /* CatsTableViewCell.swift */,
+				FB60B3EA2BAC2A4C00C5B481 /* DogsTableViewCell.swift */,
 				FFA66F192BAB115F00D94686 /* ThirdViewController.swift */,
+				FB9ED3832BAB53240017C254 /* Extensions.swift */,
 			);
 			path = "Team Project";
 			sourceTree = "<group>";
@@ -106,6 +117,8 @@
 			dependencies = (
 			);
 			name = "Team Project";
+			packageProductDependencies = (
+			);
 			productName = "Team Project";
 			productReference = 7B27CAB62BAA2E84005EF785 /* Team Project.app */;
 			productType = "com.apple.product-type.application";
@@ -134,6 +147,8 @@
 				Base,
 			);
 			mainGroup = 7B27CAAD2BAA2E84005EF785;
+			packageReferences = (
+			);
 			productRefGroup = 7B27CAB72BAA2E84005EF785 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -166,7 +181,10 @@
 				11C5A4D82BAB6A62009877A7 /* FirstViewController.swift in Sources */,
 				11C5A4DA2BAB6AF4009877A7 /* FirstScreenViewControllerWrapper.swift in Sources */,
 				7B27CABC2BAA2E84005EF785 /* SceneDelegate.swift in Sources */,
+				FB9ED3842BAB53240017C254 /* Extensions.swift in Sources */,
 				FFA66F182BAB115100D94686 /* SecondViewController.swift in Sources */,
+				FB9ED3822BAB50360017C254 /* CatsTableViewCell.swift in Sources */,
+				FB60B3EB2BAC2A4C00C5B481 /* DogsTableViewCell.swift in Sources */,
 				11C5A4D02BAB65FC009877A7 /* FirstScreenPresenter.swift in Sources */,
 				FFA66F1A2BAB115F00D94686 /* ThirdViewController.swift in Sources */,
 			);
