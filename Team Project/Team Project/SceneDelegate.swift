@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: scene)
         
-        let firstViewController = FirstViewController()
+        let firstViewController = FirstViewControllerWrapper()
         let secondViewController = SecondViewController()
         let thirdViewController = ThirdViewController()
         
