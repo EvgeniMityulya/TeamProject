@@ -20,12 +20,13 @@ final class SecondScreenPresenter: SecondScreenPresenterProtocol {
                 DispatchQueue.main.async {
                     self.view.coin = coin
                     self.view.tableView.reloadData()
+                    print("success")
                 }
                 self.view.activityIndicator.stopAnimating()
                 self.view.activityIndicator.removeFromSuperview()
             case .failure:
                 DispatchQueue.main.async {
-
+                    print("failure")
                 }
                 self.view.activityIndicator.stopAnimating()
                 self.view.activityIndicator.removeFromSuperview()
