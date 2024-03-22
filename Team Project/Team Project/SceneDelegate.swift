@@ -16,26 +16,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let scene = (scene as? UIWindowScene) else { return }
         
-        let window = UIWindow(windowScene: scene)
-        
-        let firstViewController = FirstViewControllerWrapper()
-        let secondViewController = SecondViewController()
-        let thirdViewController = ThirdViewController()
-        
-        let firstNavigationController = UINavigationController(rootViewController: firstViewController)
-        let secondNavigationController = UINavigationController(rootViewController: secondViewController)
-        let thirdNavigationController = UINavigationController(rootViewController: thirdViewController)
-        
-        firstViewController.tabBarItem = UITabBarItem(title: "Первый", image: UIImage(systemName: "1.circle"), tag: 0)
-        secondViewController.tabBarItem = UITabBarItem(title: "Второй", image: UIImage(systemName: "2.circle"), tag: 1)
-        thirdViewController.tabBarItem = UITabBarItem(title: "Третий", image: UIImage(systemName: "3.circle"), tag: 2)
-        
-        let tabBarController = UITabBarController()
-        tabBarController.setViewControllers([firstNavigationController, secondNavigationController, thirdNavigationController], animated: true)
-        
-        self.window = window
-        window.makeKeyAndVisible()
-        window.rootViewController = tabBarController
+        window = UIWindow(windowScene: scene)
+        window?.makeKeyAndVisible()
+        window?.rootViewController = MainTabBarController()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
