@@ -11,7 +11,7 @@ final class MainTabBarController: UITabBarController {
     
     private func setupTabBar() {
         viewControllers = [
-            setupVC(viewController: FirstViewControllerWrapper(), title: "Первый", image: UIImage(systemName: "1.circle")),
+            setupVC(viewController: FirstViewControllerWrapper(), title: "Users", image: UIImage(systemName: "1.circle")),
             setupVC(viewController: SecondViewController(), title: "Второй", image: UIImage(systemName: "2.circle")),
             setupVC(viewController: ThirdViewController(), title: "Третий", image: UIImage(systemName: "3.circle"))
         ]
