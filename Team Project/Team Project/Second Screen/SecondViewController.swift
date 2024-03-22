@@ -17,7 +17,6 @@ final class SecondViewController: UIViewController {
         configureUI()
         configureTableView()
         presenter = SecondScreenPresenter(view: self)
-        presenter?.requestJSON()
     }
     
     override func viewWillAppear(_ animated: Bool) {
