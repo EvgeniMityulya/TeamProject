@@ -24,13 +24,12 @@ struct FirstViewController: View {
                     NavigationLink(destination: AddScreenViewController()) {
                         Image(systemName: "plus")
                             .resizable()
-                            .frame(width: 20 , height: 20)
+                            .frame(width: 25 , height: 25)
                             .foregroundColor(Color("colorName"))
                             .padding(.horizontal)
                             .padding(.top , -18)
                     }
                 }
-                .foregroundColor(.white)
                 .padding(.top , 50)
                 .padding(.horizontal)
                 
@@ -65,26 +64,21 @@ struct FirstViewController: View {
                                     
                                     //NAME
                                     Text(user.name ?? "")
-                                        .font(Font.custom("Inter", size: 15))
+                                        .font(Font.custom("Inter", size: 17))
                                         .foregroundColor(Color("colorName"))
                                     
                                     //COUNTRY
                                     Text(user.country ?? "")
-                                        .font(Font.custom("Inter", size: 12))
+                                        .font(Font.custom("Inter", size: 14))
                                         .foregroundColor(.gray)
                                         .padding(.bottom , 10)
                                     
                                     //CRYPTO
                                     HStack {
-                                        Circle()
-                                            .frame(width: 30 , height: 30)
-                                            .foregroundColor(Color("backgroudTableView"))
-                                            .overlay(
-                                                Image(uiImage: UIImage(named: cryptocurrencyIcons[user.currency ?? ""] ?? "questionmark") ?? UIImage())
-                                                    .resizable()
-                                                    .scaledToFill()
-                                                    .frame(width: 25 , height: 25)
-                                            )
+                                        Image(uiImage: UIImage(named: cryptocurrencyIcons[user.currency ?? ""] ?? "questionmark") ?? UIImage())
+                                            .resizable()
+                                            .scaledToFill()
+                                            .frame(width: 35 , height: 35)
                                             .padding(.leading , 5)
                                         Text(user.currency ?? "")
                                             .font(Font.custom("Inter", size: 14))
@@ -93,6 +87,7 @@ struct FirstViewController: View {
                                     }
                                 }
                             }
+                            .shadow(radius: 10)
                         }
                     }
                     .padding(.horizontal , 20)
