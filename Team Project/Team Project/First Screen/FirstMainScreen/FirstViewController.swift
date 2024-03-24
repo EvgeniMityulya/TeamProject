@@ -87,6 +87,7 @@ struct FirstViewController: View {
                                     }
                                 }
                             }
+                            .shadow(radius: 10)
                         }
                     }
                     .padding(.horizontal , 20)
