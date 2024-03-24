@@ -50,6 +50,7 @@ struct AddScreenViewController: View {
                             .opacity(0.6)
                     }
                 }
+                .padding(.bottom , 30)
                 
                 //USERNAME TEXTFIELD
                 TextField("Enter username...", text: $name , onEditingChanged: { editing in
@@ -107,11 +108,11 @@ struct AddScreenViewController: View {
                                     .font(Font.custom("Inter", size: 16))
                             }
                         }
+                        .padding(.trailing)
                         .onChange(of: selectedCountryIndex) { index in
                             country = countries[index]
                         }
                         .accentColor(Color(UIColor(named: "colorName") ?? .blue))
-                        .padding(.trailing )
                         .pickerStyle(MenuPickerStyle())
                     }
                 }
@@ -134,11 +135,11 @@ struct AddScreenViewController: View {
                                     .font(Font.custom("Inter", size: 16))
                             }
                         }
+                        .padding(.trailing )
                         .onChange(of: selectedCurrencyIndex) { index in
                             currency = cryptoCurrencies[index]
                         }
                         .accentColor(Color(UIColor(named: "colorName") ?? .blue))
-                        .padding(.trailing )
                         .pickerStyle(MenuPickerStyle())
                     }
                 }
