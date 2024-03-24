@@ -13,7 +13,7 @@ final class MainTabBarController: UITabBarController {
         viewControllers = [
             setupVC(viewController: FirstViewControllerWrapper(), title: "Users", image: UIImage(systemName: "1.circle")),
             setupVC(viewController: SecondViewController(), title: "Второй", image: UIImage(systemName: "2.circle")),
-            setupVC(viewController: ThirdViewController(), title: "Третий", image: UIImage(systemName: "3.circle"))
+            setupVC(viewController: ThirdViewControllerWrapper(), title: "Третий", image: UIImage(systemName: "3.circle"))
         ]
     }
     
