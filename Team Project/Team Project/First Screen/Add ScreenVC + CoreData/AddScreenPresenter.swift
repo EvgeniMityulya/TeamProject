@@ -1,5 +1,6 @@
 import SwiftUI
 import UIKit
+import Photos
 
 //MARK: - ADDSCREEN PRESENTER
 final class AddScreenPresenter: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
@@ -15,6 +16,7 @@ final class AddScreenPresenter: NSObject, UINavigationControllerDelegate, UIImag
         imagePicker.delegate = self
         imagePicker.sourceType = .photoLibrary
         UIApplication.shared.windows.first?.rootViewController?.present(imagePicker, animated: true, completion: nil)
+        
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {

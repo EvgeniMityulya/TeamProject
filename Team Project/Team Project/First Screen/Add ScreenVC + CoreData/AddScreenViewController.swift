@@ -50,6 +50,7 @@ struct AddScreenViewController: View {
                             .opacity(0.6)
                     }
                 }
+                .padding(.bottom , 30)
                 
                 //USERNAME TEXTFIELD
                 TextField("Enter username...", text: $name , onEditingChanged: { editing in
