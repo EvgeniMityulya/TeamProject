@@ -6,14 +6,14 @@ final class MainTabBarController: UITabBarController {
         super.viewDidLoad()
         setupTabBar()
         self.tabBar.isTranslucent = true
-        self.tabBar.barTintColor = .background.withAlphaComponent(0.7)
+        self.tabBar.barTintColor = .backgroudTableView.withAlphaComponent(0.7)
     }
     
     private func setupTabBar() {
         viewControllers = [
-            setupVC(viewController: FirstViewControllerWrapper(), title: "Users", image: UIImage(systemName: "1.circle")),
-            setupVC(viewController: SecondViewController(), title: "Второй", image: UIImage(systemName: "2.circle")),
-            setupVC(viewController: ThirdViewControllerWrapper(), title: "Третий", image: UIImage(systemName: "3.circle"))
+            setupVC(viewController: FirstViewControllerWrapper(), title: "Users", image: UIImage(systemName: "person.fill")),
+            setupVC(viewController: SecondViewController(), title: "Crypto", image: UIImage(systemName: "dollarsign")),
+            setupVC(viewController: ThirdViewControllerWrapper(), title: "Top10", image: UIImage(systemName: "medal.fill"))
         ]
     }
     
