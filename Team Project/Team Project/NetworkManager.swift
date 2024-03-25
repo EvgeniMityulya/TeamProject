@@ -18,13 +18,12 @@ final class NetworkManager {
     
     enum CoinEndPoint {
         static let assets = "/assets"
-        static let exchanges = "/exchanges"
     }
     
     // MARK: - API KEY:
     
     let header: HTTPHeaders = [
-        "X-CoinAPI-Key": "BECA3812-AEA8-4843-83DA-8744B841C198",
+        "X-CoinAPI-Key": "E8C8042C-DA07-4794-9474-190969493BB3",
         "Accept": "application/json"
     ]
     

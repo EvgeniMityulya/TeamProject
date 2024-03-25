@@ -82,7 +82,7 @@ final class CriptoTableViewCell: UITableViewCell {
     
     func configure(_ coin: ModelCoin) {
         nameCoinLabel.text = coin.name
-        valueCoinLabel.text = String(coin.volumeOneDayUsd)
+        valueCoinLabel.text = String(coin.priceUsd) + "$"
     }
     
     required init?(coder: NSCoder) {
