@@ -3,7 +3,6 @@ import UIKit
 final class SecondViewController: UIViewController {
     // MARK: - PROPERTIES:
     
-    private let titleLabel = UILabel()
     let tableView = UITableView()
     var presenter: SecondScreenPresenter?
     var arrayCoin: [ModelCoin] = []
@@ -18,34 +17,32 @@ final class SecondViewController: UIViewController {
         configureUI()
         configureTableView()
         presenter = SecondScreenPresenter(view: self)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.largeTitleDisplayMode = .always
+        title = "Crypto"
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.colorText]
         presenter?.requestJSON()
     }
     
     // MARK: - ADD SUBVIEWS:
     
     private func addSubviews() {
-        view.addSubviews(titleLabel, tableView, activityIndicator)
+        view.addSubviews(tableView, activityIndicator)
     }
     
     // MARK: - CONFIGURE CONSTRAINTS:
     
     private func configureConstraints() {
         
-        // MARK: TITLE LABEL:
-        
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15).isActive = true
-        titleLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1).isActive = true
-        titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
-        
         // MARK: TABLE VIEW:
-
+        
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10).isActive = true
+        tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
@@ -57,12 +54,6 @@ final class SecondViewController: UIViewController {
         view.backgroundColor = .backgroudTableView
         tableView.backgroundColor = .backgroudTableView
         activityIndicator.center = view.center
-        
-        // MARK: TITLE LABEL:
-        
-        titleLabel.text = "Crypto"
-        titleLabel.font = .boldSystemFont(ofSize: 32)
-        titleLabel.textColor = .colorText
     }
     
     // MARK: - CONFIGURE TABLE VIEW:
@@ -81,7 +72,7 @@ extension SecondViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         arrayCoin.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CriptoTableViewCell", for: indexPath) as? CriptoTableViewCell else { return UITableViewCell() }
         let tmpCoin = arrayCoin[indexPath.row]

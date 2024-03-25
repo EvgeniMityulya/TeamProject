@@ -1,8 +1,7 @@
 import SwiftUI
 import UIKit
 
-class ThirdViewControllerWrapper: UIViewController {
-
+final class ThirdViewControllerWrapper: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
