@@ -23,7 +23,7 @@ final class NetworkManager {
     // MARK: - API KEY:
     
     let header: HTTPHeaders = [
-        "X-CoinAPI-Key": "42EB1E49-A8DA-44FF-90DB-FAB9D31A9A1F",
+        "X-CoinAPI-Key": "C3042177-2781-4855-A53B-28835EFA04B4",
         "Accept": "application/json"
     ]
     
