@@ -12,7 +12,7 @@ struct ThirdView: View {
                     .font(Font.custom("Inter", size: 23))
                 Text("50000 $")
                     .font(Font.custom("Inter", size: 18))
-                if #available(iOS 15.0, *) {
+                if #available(iOS 16.0, *) {
                     Image(systemName: "medal.fill")
                         .resizable()
                         .shadow(radius: 10)
@@ -21,9 +21,10 @@ struct ThirdView: View {
                         .frame(width: 80, height: 80)
                         .padding()
                 } else {
-                    Image(systemName: "medal.fill")
+                    Image(systemName: "rosette")
                         .resizable()
-                        .foregroundColor(.yellow)
+                        .shadow(radius: 10)
+                        .foregroundColor(Color("medalGold"))
                         .scaledToFit()
                         .frame(width: 80, height: 80)
                         .padding()
@@ -35,7 +36,7 @@ struct ThirdView: View {
                             .font(Font.custom("Inter", size: 23))
                         Text("50000 $")
                             .font(Font.custom("Inter", size: 18))
-                        if #available(iOS 15.0, *) {
+                        if #available(iOS 16.0, *) {
                             Image(systemName: "medal.fill")
                                 .resizable()
                                 .shadow(radius: 10)
@@ -44,10 +45,11 @@ struct ThirdView: View {
                                 .frame(width: 80, height: 80)
                                 .padding()
                         } else {
-                            Image(systemName: "medal.fill")
+                            Image(systemName: "rosette")
                                 .resizable()
-                                .foregroundColor(.yellow)
-                                .scaledToFill()
+                                .shadow(radius: 10)
+                                .foregroundColor(Color("medalSilver"))
+                                .scaledToFit()
                                 .frame(width: 80, height: 80)
                                 .padding()
                         }
@@ -58,7 +60,7 @@ struct ThirdView: View {
                             .font(Font.custom("Inter", size: 23))
                         Text("50000 $")
                             .font(Font.custom("Inter", size: 18))
-                        if #available(iOS 15.0, *) {
+                        if #available(iOS 16.0, *) {
                             Image(systemName: "medal.fill")
                                 .resizable()
                                 .shadow(radius: 10)
@@ -67,9 +69,10 @@ struct ThirdView: View {
                                 .frame(width: 80, height: 80)
                                 .padding()
                         } else {
-                            Image(systemName: "medal.fill")
+                            Image(systemName: "rosette")
                                 .resizable()
-                                .foregroundColor(.yellow)
+                                .shadow(radius: 10)
+                                .foregroundColor(Color("medalBronza"))
                                 .scaledToFit()
                                 .frame(width: 80, height: 80)
                                 .padding()
@@ -110,12 +113,6 @@ struct ThirdView: View {
         .background(Color("backgroudTableView").edgesIgnoringSafeArea(.all))
     }
 }
-
-
-
-
-
-
 
 #Preview {
     ThirdView()

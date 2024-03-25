@@ -1,10 +1,6 @@
 import UIKit
 
-protocol SecondScreenPresenterProtocol: AnyObject {
-    func requestJSON()
-}
-
-final class SecondScreenPresenter: SecondScreenPresenterProtocol {
+final class SecondScreenPresenter {
     
     private unowned let view: SecondViewController
     
@@ -18,7 +14,7 @@ final class SecondScreenPresenter: SecondScreenPresenterProtocol {
             switch result {
             case .success(let coin):
                 DispatchQueue.main.async {
-                    self.view.coin = coin
+                    self.view.arrayCoin = coin
                     self.view.tableView.reloadData()
                     print("success")
                 }

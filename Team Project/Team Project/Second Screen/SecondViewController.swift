@@ -5,7 +5,7 @@ final class SecondViewController: UIViewController {
     
     let tableView = UITableView()
     var presenter: SecondScreenPresenter?
-    var coin: [ModelCoin] = []
+    var arrayCoin: [ModelCoin] = []
     let activityIndicator = UIActivityIndicatorView(style: .medium)
     
     // MARK: - LIFYCYCLE:
@@ -17,10 +17,15 @@ final class SecondViewController: UIViewController {
         configureUI()
         configureTableView()
         presenter = SecondScreenPresenter(view: self)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.largeTitleDisplayMode = .always
+        title = "Crypto"
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.colorText]
         presenter?.requestJSON()
     }
     
@@ -33,10 +38,11 @@ final class SecondViewController: UIViewController {
     // MARK: - CONFIGURE CONSTRAINTS:
     
     private func configureConstraints() {
+        
         // MARK: TABLE VIEW:
-
+        
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
@@ -45,14 +51,6 @@ final class SecondViewController: UIViewController {
     // MARK: - CONFIGURE UI:
     
     private func configureUI() {
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.backgroundColor = .backgroudTableView
-        title = "Cripto"
-        let titleAttributes: [NSAttributedString.Key: Any] = [
-            .foregroundColor: UIColor.brown,
-            .font: UIFont.boldSystemFont(ofSize: 34)
-        ]
-        navigationController?.navigationBar.largeTitleTextAttributes = titleAttributes
         view.backgroundColor = .backgroudTableView
         tableView.backgroundColor = .backgroudTableView
         activityIndicator.center = view.center
@@ -72,12 +70,12 @@ final class SecondViewController: UIViewController {
 
 extension SecondViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        coin.count
+        arrayCoin.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CriptoTableViewCell", for: indexPath) as? CriptoTableViewCell else { return UITableViewCell() }
-        let tmpCoin = coin[indexPath.row]
+        let tmpCoin = arrayCoin[indexPath.row]
         cell.configure(tmpCoin)
         return cell
     }
