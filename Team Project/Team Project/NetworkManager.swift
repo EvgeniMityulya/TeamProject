@@ -35,6 +35,9 @@ final class NetworkManager {
             case .success(let coin):
                 completion(.success(coin))
             case .failure:
+                if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                    print("Response data: \(utf8Text)")
+                }
                 completion(.failure(.ErrorRequest))
             }
         }
