@@ -195,6 +195,7 @@ struct ThirdView: View {
                     coinArray.sort { ($0.priceUsd ?? 0) > ($1.priceUsd ?? 0) }
                     print(coinArray)
                 case .failure(let error):
+                    
                     print("Error fetching assets: \(error.localizedDescription)")
                 }
             }
