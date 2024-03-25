@@ -3,15 +3,38 @@ import SwiftUI
 struct ThirdView: View {
     var body: some View {
         VStack {
-            Text("TOP 10")
-                .bold()
-                .font(.largeTitle)
-                .padding()
+            if #available(iOS 16.0, *) {
+                Text("TOP 10")
+                    .foregroundStyle(.black)
+                    .bold()
+                    .font(.largeTitle)
+                    .padding()
+            } else {
+                Text("TOP 10")
+                    .foregroundColor(.black)
+                    .bold()
+                    .font(.largeTitle)
+                    .padding()
+            }
             VStack {
-                Text("Bitcoin")
-                    .font(Font.custom("Inter", size: 23))
-                Text("50000 $")
+                if #available(iOS 16.0, *) {
+                    Text("Bitcoin")
+                        .foregroundStyle(.black)
+                        .font(Font.custom("Inter", size: 23))
+                } else {
+                    Text("Bitcoin")
+                        .foregroundColor(.black)
+                        .font(Font.custom("Inter", size: 23))
+                }
+                if #available(iOS 16.0, *) {
+                    Text("50000 $")
+                        .foregroundStyle(.black)
+                        .font(Font.custom("Inter", size: 18))
+                } else {
+                    Text("50000 $")
+                    .foregroundColor(.black)
                     .font(Font.custom("Inter", size: 18))
+                }
                 if #available(iOS 16.0, *) {
                     Image(systemName: "medal.fill")
                         .resizable()
@@ -32,10 +55,24 @@ struct ThirdView: View {
                 HStack {
                     Spacer()
                     VStack {
-                        Text("Bitcoin")
-                            .font(Font.custom("Inter", size: 23))
-                        Text("50000 $")
-                            .font(Font.custom("Inter", size: 18))
+                        if #available(iOS 16.0, *) {
+                            Text("Bitcoin")
+                                .foregroundStyle(.black)
+                                .font(Font.custom("Inter", size: 23))
+                        } else {
+                            Text("Bitcoin")
+                                .foregroundColor(.black)
+                                .font(Font.custom("Inter", size: 23))
+                        }
+                        if #available(iOS 16.0, *) {
+                            Text("50000 $")
+                                .foregroundStyle(.black)
+                                .font(Font.custom("Inter", size: 18))
+                        } else {
+                            Text("50000 $")
+                                .foregroundColor(.black)
+                                .font(Font.custom("Inter", size: 18))
+                        }
                         if #available(iOS 16.0, *) {
                             Image(systemName: "medal.fill")
                                 .resizable()
@@ -56,10 +93,24 @@ struct ThirdView: View {
                     }
                     Spacer()
                     VStack {
-                        Text("Bitcoin")
-                            .font(Font.custom("Inter", size: 23))
-                        Text("50000 $")
-                            .font(Font.custom("Inter", size: 18))
+                        if #available(iOS 16.0, *) {
+                            Text("Bitcoin")
+                                .foregroundStyle(.black)
+                                .font(Font.custom("Inter", size: 23))
+                        } else {
+                            Text("Bitcoin")
+                                .foregroundColor(.black)
+                                .font(Font.custom("Inter", size: 23))
+                        }
+                        if #available(iOS 16.0, *) {
+                            Text("50000 $")
+                                .foregroundStyle(.black)
+                                .font(Font.custom("Inter", size: 18))
+                        } else {
+                            Text("50000 $")
+                                .foregroundColor(.black)
+                                .font(Font.custom("Inter", size: 18))
+                        }
                         if #available(iOS 16.0, *) {
                             Image(systemName: "medal.fill")
                                 .resizable()
