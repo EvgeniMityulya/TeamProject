@@ -82,7 +82,12 @@ final class CriptoTableViewCell: UITableViewCell {
     
     func configure(_ coin: ModelCoin) {
         nameCoinLabel.text = coin.name
-        valueCoinLabel.text = String(coin.priceUsd) + "$"
+        if let price = coin.priceUsd {
+            let formattedPrice = String(format: "%.3f", price)
+            valueCoinLabel.text = "\(formattedPrice) $"
+        } else {
+            valueCoinLabel.text = "Failed to load"
+        }
     }
     
     required init?(coder: NSCoder) {
