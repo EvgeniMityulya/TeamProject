@@ -29,7 +29,6 @@
 		FFA66F182BAB115100D94686 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA66F172BAB115100D94686 /* SecondViewController.swift */; };
 		FFA66F1A2BAB115F00D94686 /* ThirdViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA66F192BAB115F00D94686 /* ThirdViewControllerWrapper.swift */; };
 		FFB74E0A2BAED9EF000CDA20 /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB74E092BAED9EF000CDA20 /* ThirdView.swift */; };
-		FFB74E0C2BAED9FE000CDA20 /* ThirdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB74E0B2BAED9FE000CDA20 /* ThirdModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,8 +54,6 @@
 		FFA66F172BAB115100D94686 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		FFA66F192BAB115F00D94686 /* ThirdViewControllerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewControllerWrapper.swift; sourceTree = "<group>"; };
 		FFB74E092BAED9EF000CDA20 /* ThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
-		FFB74E0B2BAED9FE000CDA20 /* ThirdModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdModel.swift; sourceTree = "<group>"; };
-		FFB74E0D2BAEDA0A000CDA20 /* ThirdPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPresenter.swift; sourceTree = "<group>"; };
 		FFD192F82BAE100D00B8EBF9 /* Inter.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inter.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,19 +129,51 @@
 			children = (
 				FFD192F72BAE0FFE00B8EBF9 /* Font */,
 				11C5A4CC2BAB65BF009877A7 /* First Screen */,
+				FB60B3EC2BAC315300C5B481 /* Second Screen */,
+				FFB74E082BAED93F000CDA20 /* ThirdScreen */,
+				7BBD24AA2BB1DC5A005826EA /* Resources */,
+				7BBD24A92BB1DC4F005826EA /* Extensions */,
+				7BBD24A82BB1DC47005826EA /* Managers */,
+				7BBD24A72BB1DC3F005826EA /* Models */,
+			);
+			path = "Team Project";
+			sourceTree = "<group>";
+		};
+		7BBD24A72BB1DC3F005826EA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FBC79BD82BADBA3B00F98F48 /* ModelCoin.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7BBD24A82BB1DC47005826EA /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				FBC79BD62BADBA2200F98F48 /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		7BBD24A92BB1DC4F005826EA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FB9ED3832BAB53240017C254 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7BBD24AA2BB1DC5A005826EA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				7B27CAB92BAA2E84005EF785 /* AppDelegate.swift */,
 				7B27CABB2BAA2E84005EF785 /* SceneDelegate.swift */,
 				7B27CABD2BAA2E84005EF785 /* MainTabBarController.swift */,
 				7B27CAC22BAA2E86005EF785 /* Assets.xcassets */,
 				7B27CAC42BAA2E86005EF785 /* LaunchScreen.storyboard */,
 				7B27CAC72BAA2E86005EF785 /* Info.plist */,
-				FB60B3EC2BAC315300C5B481 /* Second Screen */,
-				FFB74E082BAED93F000CDA20 /* ThirdScreen */,
-				FB9ED3832BAB53240017C254 /* Extensions.swift */,
-				FBC79BD62BADBA2200F98F48 /* NetworkManager.swift */,
-				FBC79BD82BADBA3B00F98F48 /* ModelCoin.swift */,
 			);
-			path = "Team Project";
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		FB60B3EC2BAC315300C5B481 /* Second Screen */ = {
@@ -162,8 +191,6 @@
 			children = (
 				FFA66F192BAB115F00D94686 /* ThirdViewControllerWrapper.swift */,
 				FFB74E092BAED9EF000CDA20 /* ThirdView.swift */,
-				FFB74E0D2BAEDA0A000CDA20 /* ThirdPresenter.swift */,
-				FFB74E0B2BAED9FE000CDA20 /* ThirdModel.swift */,
 			);
 			path = ThirdScreen;
 			sourceTree = "<group>";
@@ -262,7 +289,6 @@
 				FBC79BD72BADBA2200F98F48 /* NetworkManager.swift in Sources */,
 				114337CF2BAF7A0B008B0928 /* CoreDataManager.swift in Sources */,
 				11C5A4D82BAB6A62009877A7 /* FirstViewController.swift in Sources */,
-				FFB74E0C2BAED9FE000CDA20 /* ThirdModel.swift in Sources */,
 				11C5A4DA2BAB6AF4009877A7 /* FirstScreenViewControllerWrapper.swift in Sources */,
 				7B27CABC2BAA2E84005EF785 /* SceneDelegate.swift in Sources */,
 				FB9ED3842BAB53240017C254 /* Extensions.swift in Sources */,
