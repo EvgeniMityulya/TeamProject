@@ -1,4 +1,7 @@
-struct ModelCoin: Codable {
+import Foundation
+
+struct ModelCoin: Codable, Identifiable {
+    var id = UUID()
     let name: String?
     let priceUsd: Double?
     
